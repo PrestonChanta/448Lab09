@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf=8">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <script src="formChecker.js"></script>
+        <title>Preston's Electronics</title>
+    </head>    
+    <body>
+        <h1>Preston's Electronics</h1>
+        <form action="customerBackend.php" method="post" id="form">
+
+            <div>
+                <label for="email">Enter email:</label>
+                <input type="email" id="email" name="email"> <span id="emailMessage"></span><br><br>
+
+                <label for="password">Enter password:</label>
+                <input type="password" id="password" name="password"> <span id="passwordMessage"></span><br><br><br><br>
+            </div>
+
+            <div>
+                <h3>Items:</h3>
+                <label for="laptops">Laptop(s): $2000 &emsp;&emsp;Quantity:</label>
+                <input class="Items" type="number" id="laptops" name="laptops" value="0" min="0"><br><br>
+
+                <label for="tablets">Tablet(s): $1100 &emsp;&emsp;Quantity:</label>
+                <input class="Items" type="number" id="tablets" name="tablets" value="0" min="0"><br><br>
+
+                <label for="tvs">4K TV(s): $250 &emsp;&emsp;Quantity:</label>
+                <input class="Items" type="number" id="tvs" name="tvs" value="0" min="0"><br><br><br><br>
+            </div>
+
+            <div>
+                <h3>Shipping Options:</h3>
+                <p id="shippingMessage"></p>
+                <input type="radio" id="Free" name="ship" value="Free Shipping">
+                <label for="Free">Free 7 Day</label><br>
+
+                <input type="radio" id="Overnight" name="ship" value="Overnight Shipping">
+                <label for="Overnight">$50.00 overnight</label><br>
+
+                <input type="radio" id="3 Day" name="ship" value="3-Day Shipping">
+                <label for="3 Day">$5.00 three day</label><br><br><br><br>
+            </div>
+
+            <input type="reset" value="Reset">
+            <input type="button" onclick="validate()" value="Submit">
+        </form>
+    </body>
+</html>
